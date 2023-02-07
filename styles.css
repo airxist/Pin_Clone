@@ -1,0 +1,249 @@
+@font-face {
+    font-family: bouncy;
+    src: url(../../My-Fonts/Bouncy-Thin-PERSONAL_USE_ONLY.otf);
+}
+@font-face {
+    font-family: poppins;
+    src: url(../../My-Fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+    font-family: bouncy2;
+    src: url(../../My-Fonts/GODOFWAR.TTF);
+}
+/* NEVER FORGET YOUR ROOT SON */
+:root{
+    --white: rgb(16, 37, 55);
+    --whites: rgba(49, 69, 87, 0.2);
+    --text: rgb(252, 168, 0);
+    --wyte: white;
+    /* FONTS USED IN THIS PROJECT */
+    --bouncy: bouncy;
+    --pop: poppins;
+    --bouncy2: bouncy2;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    /* font-size: 10px; */
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white);
+}
+/* ====== HEADER =========*/
+.hero{
+    padding: 0 20px;
+    height: 70px;
+}
+.heroine{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.brand_container{
+    /* background-color: white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo_container{
+    width: 50px;
+    height: 50px;
+    /* background-color: orange; */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#logo{
+    min-width: 100%;
+    object-fit: cover;
+    transform: scale(2.3);
+}
+.brand_name{
+    font-family: var(--bouncy);
+    margin-left: 5px;
+    letter-spacing: 2px;
+    font-size: 30px;
+    color: var(--text);
+}
+.ccl{
+    transition: 2s;
+}
+/* ============ NAVIGATION COMPASS ======*/
+.compass{
+    width: 40%;
+}
+.compass_angle{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.compass_angle li {
+    margin-left: 30px;
+    cursor: pointer;
+}
+.compass_angle li:last-of-type{
+    background-color: gainsboro;
+    margin-right: 20px;
+}
+.compass_angle li a{
+    text-decoration: none;
+    color: var(--wyte);
+    font-family: var(--pop);
+}
+.compass_angle li a:hover{
+    color: var(--text);
+}
+.compass_angle li:nth-of-type(4){
+    background-color: var(--text);
+
+}
+
+.pad{
+    padding: 2px 4px;
+    border-radius: 20px;
+    font-family: var(--pop);
+}
+.pad:hover{
+    transform: scale(0.9);
+    color: white;
+}
+
+/* =============Main(MAINNET) ===========*/
+.mainnet{
+   
+    width: 100%;
+    height: calc(100% - 70px);
+    position: relative;
+}
+.stable_msg{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.msg_d, .msg_s{
+    text-align: center;
+}
+.msg{
+    color: var(--wyte);
+    font-family: var(--bouncy2);
+    font-size: 50px;
+    letter-spacing: 2.3px;
+}
+.msg_d{
+    width: 650px;
+    height: 80px;
+    margin-top: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.mssg{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.trns{
+    transition: 2s;
+}
+.mssg h2{
+    color: var(--text);
+    font-family: var(--pop);
+    font-size: 50px;
+}
+/* PAGINATION */
+.page{
+    height: 20px;
+    display: flex;
+    max-width: 150px;
+    margin: auto;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+.dots{
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+.active{
+    background-color: orange;
+}
+
+/* Picture section */
+.gallery{
+    height: 350px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+.mgal{
+    position: absolute;
+    width: 120%;
+    left: -10%;
+    height: inherit;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.pblok{
+    width: 260px;
+    margin: 0 10px;
+    position: relative;
+    overflow: hidden;
+}
+.pblok:first-of-type, .pblok:last-of-type{
+    height: inherit;
+}
+.pblok:first-of-type, .pblok:nth-of-type(2), .pblok:nth-of-type(3){
+    transform: translateX(-20%);
+}
+.pblok:last-of-type, .pblok:nth-of-type(5), .pblok:nth-of-type(6){
+    transform: translateX(20%);
+}
+.pblok:nth-of-type(2), .pblok:nth-of-type(6){
+    height: 70%;
+}
+.pblok:nth-of-type(3), .pblok:nth-of-type(5){
+    height: 50%;
+}
+.pblok:nth-of-type(4){
+    height: 40px;
+    margin: 0 30px;
+}
+.imghold{
+    width: inherit;
+    height: 100%;
+    position: absolute;
+}
+.imghold img{
+    min-width: 100%;
+    height: inherit;
+    object-fit: cover;
+    object-position: 60% 50%;
+}
+
+
+/* the shadow of my project */
+.shadow{
+    width: 100%;
+    height: inherit;
+    background: linear-gradient(transparent 70%, var(--whites) 15%, var(--white));
+    position: absolute;
+    z-index: 1;
+}
