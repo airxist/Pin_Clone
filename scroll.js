@@ -28,25 +28,34 @@ setInterval(() => {
 doc_body.addEventListener("keyup", (e) => {
     let datakey = e.key;
     if(datakey == "ArrowDown") {
-        num += add;
-        window.scrollY = num;
-        window.scrollTo(0, window.scrollY);
+        if (num >= (add * (pages_arr.length - 1))) {
+            num = add * (pages_arr.length - 1);
+            console.log(num);
+        }else{
+            num += add;
+            window.scrollY = num;
+            window.scrollTo(0, window.scrollY);
+        }
     }else if(datakey == "ArrowUp") {
-       num -= add;
-       window.scrollY = num;
-       window.scrollTo(0, window.scrollY);
+        console.log(num);
+        if (num <= 0) {
+            num = 0;
+        }else {
+            num -= add;
+            window.scrollY = num;
+            window.scrollTo(0, window.scrollY);
+        }
     }
 })// DOC BODY KEYUP  EVENTS
 
 window.addEventListener("touchstart", (e) => {
     prev_pageY = e.touches[0].screenY;
-    // console.log(prev_pageY);
-    // console.log(add);
 })
 
+// The touch effect
 window.addEventListener("touchmove", (e) => {
     let current_pageY = e.touches[0].screenY;
-    // console.log(prev_pageY, current_pageY)
+    console.log(num)
     let windowPage = window.pageYOffset;
     if(windowPage < add) {
         num = add;
@@ -57,8 +66,9 @@ window.addEventListener("touchmove", (e) => {
     } else if ( windowPage < (add * 4)) {
         num = (add * 4);
     }
-    
+
     if(current_pageY < prev_pageY) {
+        console.log(num);
         window.scrollTo(0, num)
     }else {
         num -= add;
