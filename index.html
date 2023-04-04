@@ -1,107 +1,347 @@
 <!DOCTYPE html>
-<html lang='en'>
-	<head>
-		<meta charset="UTF-8">
-		<meta name='viewport' content='width=device-width, initial-scale=1'>
-		<meta name='description' content='TRYING TO CREATE A LANDING PAGE CLONE FOR PININTEREST'>
-		<meta name='author' content='Da_Hubb'>
-		<meta name="keywords" content="Go and ask your grandfather">
-		<title>PIN INTEREST LANDING PAGE CLONE PROJECT</title>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="This is a pin clone, pin interest clone">
+	<meta name="author" content="Da-Hubb (Sopuruchukwu Josemaria)">
+	<link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+	<!-- external style -->
+	<link rel="stylesheet" href="styles.css">
+	<!-- external script -->
+	<script src="script_1.js" defer></script>
+	<script src="script_3.js" defer></script>
+	<script src="script_4.js" defer></script>
+	<script src="scroll.js" defer></script>
+	<title>Da-Hubb || Pin Clone</title>
 
-		<!-- This is for the styling of the webpage -->
-		<link rel="stylesheet" href="styles.css" id="styling"/>
-
-		<!-- This is for the icon on the head of the website (you already know what i am talking about -->
-		<link rel="icon" href="../../vids_imgs/logo/favicon-32x32.png"/>
-
-		<!-- The script that wil create the functionality -->
-		<script src="script.js" defer></script>
-	</head>
-	<body>
-		<header class="hero">
-			<section class="heroine">
-				<!-- the logo of the project -->
-				<div class="brand_container">
-					<div class="logo_container">
-						<img loading="eager" src="../../vids_imgs/logo/logo-removebg-preview.png" title="niterest" alt="logo" id="logo">
-					</div>
-					<h2 class="brand_name">Da_Hubb</h2>
-				</div>
-
-
-				<!-- the navigation set up -->
-				<nav class="compass">
-					<ul class="compass_angle">
-						<li><a href="" title="">About</a></li>
-						<li><a href="" title="">Business</a></li>
-						<li><a href="" title="">Blog</a></li>
-						<li class="pad">Login</li>
-						<li class="pad">Sign Up</li>
-					</ul>
-				</nav>
-			</section>
+	<!-- inline style for my bubble -->
+	<style>
+		.bubble {
+			width: 50px;
+			height: 50px;
+			display: block;
+			/* background-color: var(--blood); */
+			position: absolute;
+			border: solid 1px var(--blood);
+			border-radius: 50%;
+			box-shadow: inset 0 0 50px var(--blood);
+			animation: bubbling .3s linear 1;
+		}
+		@keyframes bubbling {
+			0% {
+				opacity: 1;
+				width: 0;
+				height: 0;
+			}
+			100% {
+				opacity: 0;
+				width: 100px;
+				height: 100px;
+			}	
+		}
+	</style>
+</head>
+<body>
+	</span>
+	<!-- end of bubble -->
+	<div class="first_wrap">
+		<header class="master">
+			<!-- logo  wrapper or container -->
+			<div class="logo_hold">
+				<img src="assets/images/logo.png" alt="logo" class="logo">
+				<h3 class="logo_title">
+					Da-Hubb
+				</h3>
+			</div>
+			<!-- the navbar -->
+			<nav class="navigation">
+				<ul class="co-ordinates">
+					<li class="point link">
+						<a href="http://" target="_blank" rel="noopener noreferrer">
+						About
+						</a>
+					</li>
+					<li class="point link">
+						<a href="http://" target="_blank" rel="noopener noreferrer">
+						Business
+						</a>
+					</li>
+					<li class="point link">
+						<a href="http://" target="_blank" rel="noopener noreferrer">
+						Blog
+						</a>
+					</li>
+					<li class="point login">
+						Log in
+					</li>
+					<li class="point signup">
+						Sign Up
+					</li>
+				</ul>
+			</nav>
 		</header>
-
-		<!-- here is the main page of this project -->
-		<main class="mainnet">
-			<section class="stable_msg">
-				<!-- the main stable one  -->
-				<div class="msg_s">
-					<h1 class="msg">Get <span class="ccl">your</span> next</h1>
+		<!-- first main block -->
+		<section class="first_main">
+			<!-- the title block and holders -->
+			<article class="first_main_detail">
+				<h1 class="static_title">Get your next</h1>
+				<div class="next_display">
+					<h2 class="next_title shownext">Tour Trip To The Jungle</h2>
+					<h2 class="next_title invalid">Best Outfit</h2>
+					<h2 class="next_title invalid">Weeknight Dinner Location</h2>
+					<h2 class="next_title invalid">Favorite Gift Item</h2>
 				</div>
-				 
-				<!-- the dynamic -->
-				<section class="msg_d">
-					<!-- The messages has been done by the script -->
-				</section>
+				<!-- indicator -->
+				<div class="indicator">
+					<span class="indicate active"></span>
+					<span class="indicate"></span>
+					<span class="indicate"></span>
+					<span class="indicate"></span>
+				</div>
+			</article>
+			<!-- the image display block -->
+			<div class="photo_shop">
+				<figure class="prod_photo higher">
+					<img src="assets/images/jungle/jungle1.webp" alt="first image" class="first showimage">
+					<img src="assets/images/outfit/outfit1.jfif" alt="first image" class="first">
+					<img src="assets/images/dinner/dinner1.jpg" alt="first image" class="first">
+					<img src="assets/images/gifts/gift1.webp" alt="first image" class="first">
+				</figure>
+				<figure class="prod_photo high">
+					<img src="assets/images/jungle/jungle2.jpg" alt="first image" class="second showimage">
+					<img src="assets/images/outfit/outfit2.jpg" alt="first image" class="second">
+					<img src="assets/images/dinner/dinner2.jpeg" alt="first image" class="second">
+					<img src="assets/images/gifts/gift2.jfif" alt="first image" class="second">
+				</figure>
+				<figure class="prod_photo">
+					<img src="assets/images/jungle/jungle3.jpg" alt="first image" class="third showimage">
+					<img src="assets/images/outfit/outfit3.jfif" alt="first image" class="third">
+					<img src="assets/images/dinner/dinner3.jpg" alt="first image" class="third">
+					<img src="assets/images/gifts/gift3.webp" alt="first image" class="third">
+				</figure>
 
-				<!-- the iteration dots -->
-				<section class="page">
-					<div class="dots active"></div>
-					<div class="dots"></div>
-					<div class="dots"></div>
-					<div class="dots"></div>
-				</section>
+				<div class="divider"></div>
+
+				<figure class="prod_photo">
+					<img src="assets/images/jungle/jungle4.jpg" alt="first image" class="fourth showimage">
+					<img src="assets/images/outfit/outfit4.webp" alt="first image" class="fourth">
+					<img src="assets/images/dinner/dinner4.jpg" alt="first image" class="fourth">
+					<img src="assets/images/gifts/gift4.webp" alt="first image" class="fourth">
+				</figure>
+				<figure class="prod_photo high">
+					<img src="assets/images/jungle/jungle5.jpeg" alt="first image" class="fifth showimage">
+					<img src="assets/images/outfit/outfit5.jpg" alt="first image" class="fifth">
+					<img src="assets/images/dinner/dinner5.jpg" alt="first image" class="fifth">
+					<img src="assets/images/gifts/gift5.webp" alt="first image" class="fifth">
+				</figure>
+				<figure class="prod_photo higher">
+					<img src="assets/images/jungle/jungle6.jfif" alt="first image" class="sixth showimage">
+					<img src="assets/images/outfit/outfit6.jpg" alt="first image" class="sixth">
+					<img src="assets/images/dinner/dinner6.jpg" alt="first image" class="sixth">
+					<img src="assets/images/gifts/gift6.jpg" alt="first image" class="sixth">
+				</figure>
+			</div>
+		</section>
+		<!-- calling nex page -->
+		<div class="next_wrap">
+			<span class="down_you_go">
+				<img src="assets/svg/icon-down.svg" class="down_symbol" alt="">
+			</span>
+			<p class="call_info">Here's how it works <span class="down_symbol"><img src="assets/svg/icon-down.svg" alt=""></span></p>
+		</div>
+	</div>
+	<!-- second wrap starts here -->
+	<div class="second_wrap">
+		<!-- the search -->
+		<section class="find">
+			<div class="find_pictogram">
+				<img src="assets/images/miscellaneous/bg2.jpg" alt="" class="first_find_pic">
+				<img src="assets/images/miscellaneous/water.webp" alt="" class="second_find_pic">
+				<img src="assets/images/miscellaneous/bg4.jpg" alt="" class="third_find_pic">
+				<img src="assets/images/miscellaneous/tea.jpg" alt="" class="fourth_find_pic">
+				<!-- the search -->
+				<div class="searchbox">
+					<input type="text" class="search" placeholder="easy chicken dinner">
+				</div>
+			</div>
+			<section class="small_detail">
+				<h2 class="small_title">
+					Search for an idea
+				</h2>
+				<p class="small_text">
+					What do you want to try next? Think of 
+					something you're into<span class="hyphen"></span>like <q>easy chicken dinner</q>
+					<span class="hyphen"></span> and see what you find
+				</p>
+
+				<button class="explore" type="button">
+					Explore
+				</button>
 			</section>
+		</section>
+	</div>
+	<!-- third wrap starts here -->
+	<div class="third_wrap">
+		<section class="small_detail">
+			<h2 class="small_title">
+				Save ideas you like
+			</h2>
+			<p class="small_text">
+				Collect your favourites so you can get 
+				back to them later
+			</p>
 
-
-			<!-- the picture section of the project -->
-			<section class="gallery">
-				<!-- gallery main -->
-				<div class="mgal">
-					<!-- single picture of the project -->
-					<div class="pblok blok1"> </div>
-					<!-- end of a single picture -->
-
-					<!-- single picture of the project -->
-					<div class="pblok blok2"> </div>
-					<!-- end of a single picture -->
-
-					<!-- single pieture of the project -->
-					<div class="pblok blok3">	</div>
-					<!-- end of a single picture -->
-
-					<!-- single picture of the project -->
-					<div class="pblok"></div>
-					<!-- end of a single picture -->
-
-					<!-- single picture of the project -->
-					<div class="pblok blok5"></div>
-					<!-- end of a single picture -->
-
-					<!-- single picture of the project -->
-					<div class="pblok blok6"></div>
-					<!-- end of a single picture -->
-
-					<!-- single picture of the project -->
-					<div class="pblok blok7"></div>
-					<!-- end of a single picture -->
-
+			<button class="explore" type="button">
+				Explore
+			</button>
+		</section>
+		
+		<section class="third_picdisplay">
+			<figure class="third_pic">
+				<div class="third_pic_text">
+					<h2>Title</h2>
+					<article class="text_pic">
+						<img src="assets/images/miscellaneous/food2.webp" alt="">
+						<img src="assets/images/miscellaneous/design3.jpg" alt="">
+						<img src="assets/images/miscellaneous/design1.webp" alt="">
+					</article>
+				</div>
+			</figure>
+			<figure class="third_pic">
+				<div class="third_pic_text">
+					<h2>Title</h2>
+				</div>
+			</figure>
+			<figure class="third_pic">
+				<div class="third_pic_text">
+					<h2>Title</h2>
+				</div>
+			</figure>
+			<figure class="third_pic">
+				<div class="third_pic_text">
+					<h2>Title</h2>
+				</div>
+			</figure>
+			<figure class="third_pic">
+				<div class="third_pic_text">
+					<h2>Title</h2>
+				</div>
+			</figure>
+		</section>
+	</div>
+	<!-- fourth wrap starts here -->
+	<div class="fourth_wrap">
+		<section class="fourth_pictogram">
+			<video class="my_video" src="assets/images/miscellaneous/Short video from the beach for mind relaxation - nikana.gr.mp4" muted loop autoplay></video>
+			<article class="overlay_text">
+				<div class="phone_container phone_first firstly">
+					
+				</div>
+				<div class="phone_container phone_second secondly">
+					
+				</div>
+				<div class="phone_container phone_third thirdly">
+					
+				</div>
+				<div class="phone_container phone_fourth fourthly">
+					
+				</div>
+				<div class="phone_container phone_fifth fifthly">
+					
 				</div>
 
-				<!-- the shadowy stuff of the project -->
-				<div class="shadow"></div>
+				<div class="fourth_detail small_detail">
+					<h2 class="small_title">
+						See it, make it, try it, do it
+					</h2>
+					<p class="small_text">
+						the best part of Da-Hubb is discovering new 
+						things and ideas from people around the world.
+					</p>
+		
+					<button class="explore" type="button">
+						Explore
+					</button>
+				</div>
+			</article>
+		</section>
+	</div>
+	<!-- fifth wrap starts here -->
+	<div class="fifth_wrap">
+		<div class="fifth_container">
+			<figure class="carousel">
+				<img src="assets/images/dinner/dinner1.jpg" alt="">
+				<img src="assets/images/gifts/gift1.webp" alt="">
+				<img src="assets/images/jungle/jungle1.webp" alt="">
+			</figure>
+			<figure class="carousel">
+				<img src="assets/images/outfit/outfit1.jfif" alt="">
+				<img src="assets/images/miscellaneous/background2.jpg" alt="">
+				<img src="assets/images/dinner/dinner2.jpeg" alt="">
+			</figure>
+			<figure class="carousel">
+				<img src="assets/images/gifts/gift2.jfif" alt="">
+				<img src="assets/images/jungle/jungle2.jpg" alt="">
+				<img src="assets/images/outfit/outfit2.jpg" alt="">
+			</figure>
+			<figure class="carousel">
+				<img src="assets/images/miscellaneous/background7.jpg" alt="">
+				<img src="assets/images/dinner/dinner3.jpg" alt="">
+				<img src="assets/images/gifts/gift3.webp" alt="">
+			</figure>
+			<figure class="carousel">
+				<img src="assets/images/jungle/jungle3.jpg" alt="">
+				<img src="assets/images/miscellaneous/women.jpg" alt="">
+				<img src="assets/images/miscellaneous/women.webp" alt="">
+			</figure>
+		</div>
+		<!-- the form container -->
+		<div class="form_container">
+			<section class="form_detail">
+				<h2 class="form_title">
+					<span>Sign up to</span>
+					<span>get your</span>
+					<span>ideas</span>
+				</h2>
 			</section>
-		</main>
-	</body>
+			<form action="" class="form">
+				<div class="form_baggage">
+					<img src="assets/images/logo.png" alt="" class="logo">
+					<h2 class="main_form_title">
+						Welcome to Da-Hubb
+					</h2>
+				</div>
+				<p class="summary">
+					Find new ideas to try
+				</p>
+
+				<div class="input_container">
+					<label for="email">
+						Email
+						<input type="text" placeholder="Email" name="email" id="email" required>
+					</label>
+					<label for="password">
+						Password
+						<input type="password" placeholder="Create a password" name="password" id="password" required>
+					</label>
+					<label for="birth">
+						Birthdate
+						<input type="date" name="d.o.b" id="birth" required>
+					</label>
+
+					<button type="submit">Continue</button>
+					<p class="or">OR</p>
+					<button class="facebook" type="button">Continue with Facebook</button>
+					<button class="google" type="button">Continue with Google</button>
+				</div>
+			</form>
+		</div>
+
+		<span class="up_you_go">
+			<img src="assets/svg/icon-up.svg" alt="" class="up_symbol">
+		</span>
+	</div>
+</body>
 </html>
