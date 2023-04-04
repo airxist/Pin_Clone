@@ -785,7 +785,7 @@ body {
 .main_form_title {
     font-family: var(--rb);
     white-space: nowrap;
-    color: var(--blood)
+    color: var(--blood);
 }
 .summary {
     font-family: var(--rl);
@@ -889,6 +889,10 @@ label input {
         box-shadow: 0 0 20px -5px black;
         width: 70px;
         border-radius: 50%;
+    }
+    .main_form_title {
+        width: 100%;
+        font-size: 6vw;
     }
     .form {
         border: 10px solid transparent;
@@ -1081,9 +1085,9 @@ label input {
 .hide {
     display: none;
 }
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 0;
-} */
+}
 @keyframes spring {
     0% {
         transform: translateY(10px);

@@ -16,6 +16,7 @@ const pages_arr = [
 ]
 let page0 = document.querySelector(pages_arr[0]);
 let page1 = document.querySelector(pages_arr[1]).offsetTop;
+let prev_pageY;
 
 
 let add;
@@ -28,20 +29,50 @@ doc_body.addEventListener("keyup", (e) => {
     let datakey = e.key;
     if(datakey == "ArrowDown") {
         num += add;
-        window.scrollTo(0, num);
+        window.scrollY = num;
+        window.scrollTo(0, window.scrollY);
     }else if(datakey == "ArrowUp") {
        num -= add;
-       window.scrollTo(0, num);
+       window.scrollY = num;
+       window.scrollTo(0, window.scrollY);
     }
-    console.log(doc_body.scrollTop)
-})// DOC BODY EVENTS
-window.addEventListener("scroll", (e) => {
-})// window events on scroll
+})// DOC BODY KEYUP  EVENTS
+
+window.addEventListener("touchstart", (e) => {
+    prev_pageY = e.touches[0].screenY;
+    // console.log(prev_pageY);
+    // console.log(add);
+})
+
+window.addEventListener("touchmove", (e) => {
+    let current_pageY = e.touches[0].screenY;
+    // console.log(prev_pageY, current_pageY)
+    let windowPage = window.pageYOffset;
+    if(windowPage < add) {
+        num = add;
+    }else if(windowPage < (add * 2)) {
+        num = (add * 2);
+    }else if( windowPage < (add * 3)) {
+        num = (add * 3)
+    } else if ( windowPage < (add * 4)) {
+        num = (add * 4);
+    }
+    
+    if(current_pageY < prev_pageY) {
+        window.scrollTo(0, num)
+    }else {
+        num -= add;
+        console.log(num);
+        window.scrollTo(0, num)
+    }
+})
+
 downbtn.addEventListener("click", () => {
     window.scrollTo(0, page1)
 })
+
 upbtn.addEventListener("click", () => {
-    let pos = add * 4;
+    let pos = add * (pages_arr.length - 1);
     window.scrollTo(0, -pos);
     num = 0;
 })
