@@ -14,6 +14,7 @@
 	<script src="script_3.js" defer></script>
 	<script src="script_4.js" defer></script>
 	<script src="scroll.js" defer></script>
+	<script src="form.js" defer></script>
 	<title>Da-Hubb || Pin Clone</title>
 
 	<!-- inline style for my bubble -->
@@ -41,6 +42,83 @@
 				height: 100px;
 			}	
 		}
+		.form_wrap {
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: var(--dark-trans);
+			width: 100%;
+			height: 100%;
+			z-index: 8;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+			transform: translate(100%, 100%);
+			transition: .5s;
+		}
+		.show_form_wrap {
+			transform: translate(0px);
+		}
+		.form1 {
+			background-color: rgba(255, 255, 255, 0.63);
+			width: 40%;
+			border-radius: 20px;
+			backdrop-filter: blur(15px) 
+			saturate(5000%);
+			filter: contrast(100%)
+			brightness(100%);
+			border: 10px solid transparent;
+			background-clip: padding-box;
+			padding: 30px;
+			overflow: hidden;
+			transform: translateY(-1500px);
+			border-radius: 50%;
+			transition: 1s;
+		}
+		.normalform {
+			transform: translateY(0px);
+		}
+		.removeborder {
+			border-radius: 0%;
+		}
+		.form1 .logo {
+			width: 40px;
+			transform: translateY(-100px);
+			transition: .2s;
+		}
+		.form1 .showlogo {
+			transform: translateY(0px);
+		}
+		.form1 .summary {
+			text-align: center;
+			opacity: 0;
+			transition: .3s;
+		}
+		.form1 .showsummary {
+			opacity: 1;
+		}
+		.form1 .input_container {
+			transform: rotateX(90deg);
+			transition: .3s;
+		}
+		.form1 .showinput {
+			transform: rotate(0deg);
+		}
+		.close_form {
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			cursor: pointer;
+			transform: translateY(-200px);
+			transition: 2s;
+		}
+		.close_form:hover path {
+			fill: var(--blood)
+		}
+		.showclose {
+			transform: translate(0px);
+		}
 	</style>
 </head>
 <body>
@@ -60,7 +138,7 @@
 				<ul class="co-ordinates">
 					<li class="point link">
 						<a href="http://" target="_blank" rel="noopener noreferrer">
-						About
+							About
 						</a>
 					</li>
 					<li class="point link">
@@ -82,6 +160,41 @@
 				</ul>
 			</nav>
 		</header>
+		<!-- the first form -->
+		<div class="form_wrap">
+			<form action="" class="form1">
+				<svg class="close_form" xmlns="http://www.w3.org/2000/svg" width="21" height="22"><path fill="#242D52" fill-rule="evenodd" d="M17.925.747l2.828 2.828L13.328 11l7.425 7.425-2.828 2.828-7.425-7.425-7.425 7.425-2.828-2.828L7.671 11 .247 3.575 3.075.747 10.5 8.171 17.925.747z"/></svg>
+				<div class="form_baggage">
+					<img src="assets/images/logo.png" alt="" class="logo">
+					<h2 class="main_form_title">
+						Welcome to Da-Hubb
+					</h2>
+				</div>
+				<p class="summary">
+					Find new ideas to try
+				</p>
+	
+				<div class="input_container">
+					<label for="email">
+						Email
+						<input type="text" placeholder="Email" name="email" id="email" required>
+					</label>
+					<label for="password">
+						Password
+						<input type="password" placeholder="Create a password" name="password" id="password" required>
+					</label>
+					<label for="birth">
+						Birthdate
+						<input type="date" name="d.o.b" id="birth" required>
+					</label>
+	
+					<button type="submit">Continue</button>
+					<p class="or">OR</p>
+					<button class="facebook" type="button">Continue with Facebook</button>
+					<button class="google" type="button">Continue with Google</button>
+				</div>
+			</form>
+		</div>
 		<!-- first main block -->
 		<section class="first_main">
 			<!-- the title block and holders -->

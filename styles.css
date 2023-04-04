@@ -45,7 +45,7 @@ html {
 }
 body {
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     background-color: var(--white);
 }
 /* styling for first wrap */
