@@ -47,6 +47,7 @@ body {
     width: 100%;
     height: 100vh;
     background-color: var(--white);
+    overflow-x: hidden;
 }
 /* styling for first wrap */
 .first_wrap {
@@ -999,7 +1000,6 @@ label input {
         top: 60px;
         left: 30px;
         width: 30%;
-
     }
     .first_find_pic {
         height: 100px;
@@ -1010,6 +1010,9 @@ label input {
         height: 50%;
         overflow: hidden;
         padding: 20px;
+    }
+    .form_wrap {
+        display: none;
     }
     .find {
         flex-direction: column;
@@ -1058,7 +1061,7 @@ label input {
         display: none;
     }
     body {
-        background-color: var(--charcoal);
+        /* background-color: var(--charcoal); */
     }
 }
 @media screen and (max-width: 375px) {
@@ -1085,9 +1088,9 @@ label input {
 .hide {
     display: none;
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 0;
-}
+} */
 @keyframes spring {
     0% {
         transform: translateY(10px);
