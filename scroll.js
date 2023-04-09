@@ -82,11 +82,9 @@ window.addEventListener("touchmove", (e) => {
     }
 
     if(current_pageY < prev_pageY) {
-        console.log(num);
         window.scrollTo(0, num)
     }else {
         num -= add;
-        console.log(num);
         window.scrollTo(0, num)
     }
 })
